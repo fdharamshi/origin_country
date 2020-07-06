@@ -6,7 +6,7 @@ Did you know you can find the origin of a product by the prefix on it's barcode 
 
 This project is created, to scan a barcode and by the result of the barcode, we will find the origin country of that product.
 
--
+---
 
 ![How it Looks](screenshot.png)
 
