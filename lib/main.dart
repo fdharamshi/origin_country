@@ -120,6 +120,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void findCountry(String barcode) {
+
+    //A function to find the country. You can call it a controller function.
+
     int first3 = int.parse(barcode.substring(0, 3));
 
     Map countryMap = getCountry(first3);
@@ -129,6 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
           msg: "Product Origin not identified", toastLength: Toast.LENGTH_LONG);
     }
 
+    //showDialog is a ready function to show a Dialog Box.
     showDialog(
       context: context,
       builder: (BuildContext context) =>
@@ -137,6 +141,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _countryDialog(String country, String code) {
+
+    //This function will return a dialog box widget that will be popped up to show the country of the product.
+
     return Dialog(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(66),
@@ -168,6 +175,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Map<String, String> getCountry(int x) {
+
+    // This function will return the country name and country Code on the basis of first three numbers of the barcode string.
+
     if (x == 890)
       return {'Country': 'India', 'Code': 'in'};
     else if (x >= 690 && x <= 699)
